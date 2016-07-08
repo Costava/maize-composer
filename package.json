@@ -1,0 +1,21 @@
+{
+  "name": "maize-composer",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "gulp clear-build && gulp dev-tasks",
+    "build-production": "gulp clear-build && gulp production-tasks",
+    "debug-scripts": "webpack --watch --progress"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "cssnano": "^3.5.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "postcss": "^5.0.16",
+    "postcss-advanced-variables": "^1.2.2",
+    "webpack": "^1.12.13"
+  }
+}
