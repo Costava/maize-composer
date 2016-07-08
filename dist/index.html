@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Maize Composer</title>
+
+		<link href="styles/style.css" rel="stylesheet">
+
+		<script src="scripts/band.js"></script>
+	</head>
+
+	<body>
+		<div class="staff-holder js-staff-holder">
+			<div class="staff-keys js-staff-keys"></div>
+
+			<div class="staffs js-staffs"></div>
+		</div>
+
+		<div class="control-panel-row">
+			<span>Insert Object:</span>
+			<select class="js-insert-object">
+				<option value="noteColumn">noteColumn</option>
+				<option value="volChanger">volChanger</option>
+			</select>
+
+			<span>Insert:</span>
+			<input type="radio" name="where" value="Before">Before
+			<input type="radio" name="where" value="After" checked="true">After
+
+			<textarea class="note-display js-note-display"></textarea>
+
+			<span>Staff Number:</span>
+			<input type="number" class="staff-number" value="1" min="1" step="1"></input>
+			<button class="js-raise">Raise</button>
+			<button class="js-lower">Lower</button>
+		</div>
+
+		<div class="control-panel-row">
+			<button class="js-add-staff">Add Staff</button>
+
+			<span>Middle Note:</span>
+			<select class="js-mid-note-letter">
+				<option value="A">A</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+				<option value="D">D</option>
+				<option value="E">E</option>
+				<option value="F">F</option>
+				<option value="G">G</option>
+			</select>
+
+			<select class="js-mid-note-mod">
+				<option value=""></option>
+				<option value="b">b</option>
+				<option value="#">#</option>
+			</select>
+
+			<select class="js-mid-note-num">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4" selected="true">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+
+			<span>
+				<span>Instrument Pack:</span>
+				<select class="js-pack-choice js-pack">
+					<option value="oscillators">oscillators</option>
+					<option value="noises">noises</option>
+				</select>
+
+				<span>Instrument:</span>
+				<span class="js-instr-wrapper"></span>
+			</span>
+		</div>
+
+		<div class="control-panel-row">
+			<button class="js-construct">Construct song data and set up to play</button>
+
+			<span>Time Signature:</span>
+			<input type="number" class="time-sig time-sig-top js-time-sig-top" value="4" min="1" step="1"></input>
+			<select class="time-sig-bot js-time-sig-bot">
+				<option value="2">2</option>
+				<option value="4" selected="true">4</option>
+				<option value="8">8</option>
+			</select>
+
+			<span>Tempo:</span>
+			<input type="number" class="tempo js-tempo" value="140" min="1" step="1"></input>
+
+			<span>Note Buffer Length:</span>
+			<input type="number" class="buffer-length js-buffer-length" value="20" min="1" step="1"></input>
+		</div>
+
+		<div class="control-panel-row">
+			<button class="js-play">Play</button>
+			<button class="js-pause">Pause</button>
+			<button class="js-stop">Stop</button>
+
+			<button class="js-play-from-time">Play from Time</button>
+			<span>Start Time:</span>
+			<input type="number" class="js-start-time" value="0" min="0" step="1">
+		</div>
+
+		<div class="control-panel-row">
+			<textarea class="dump js-dump"></textarea>
+
+			<div class="instrument-list">
+				Instruments:
+				<ol class="instruments js-instruments"></ol>
+			</div>
+		</div>
+
+		<div class="control-panel-row">
+			<button class="js-load">Load from Text</button>
+		</div>
+
+		<div class="control-panel-row">
+			Maize Composer.&nbsp;<a href="https://github.com/Costava/maize-composer" target="_blank">View source on GitHub</a>.
+		</div>
+
+		<script src="scripts/bundle.js"></script>
+	</body>
+</html>
