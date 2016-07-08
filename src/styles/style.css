@@ -1,0 +1,281 @@
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff;
+
+	overflow: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.staff-holder {
+	margin: 8px;
+	border: 0;
+	padding: 0;
+
+	background-color: #444;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.staffs {
+	overflow-x: auto;
+}
+
+.staff {
+	margin: 0;
+	border: 0;
+	padding: 4px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+$row-height: 25px;
+$toolbar-width: 8px;
+
+.staff-key {
+	margin: 0;
+	border: 0;
+	padding: 4px;
+
+	list-style: none;
+
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+.staff-key li:not(.top-adjuster):not(.bot-adjuster) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* http://www.colourlovers.com/palette/1603252/Cornfield_Morning */
+.staff-key li:nth-child(3n), .notes li:nth-child(3n) {
+	background-color: #e7ee91;
+}
+
+.staff-key li:nth-child(3n+1), .notes li:nth-child(3n+1) {
+	background-color: #d1e88c;
+}
+
+.staff-key li:nth-child(3n+2), .notes li:nth-child(3n+2) {
+	background-color: #dbce67;
+}
+
+.top-adjuster, .bot-adjuster {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+.top-add, .top-rem, .bot-add, .bot-rem {
+	width: 100%;
+	height: 50%;
+}
+
+.top-add, .bot-add {
+	background-color: #0f0;
+}
+
+.top-rem, .bot-rem {
+	background-color: #f00;
+}
+
+.note-column {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex-shrink: 0;
+
+	/* width and height styles are applied when note column is made */
+
+	overflow: hidden;
+}
+
+.note-column:hover {
+	opacity: 0.75;
+	overflow: visible;
+}
+
+.notes {
+	margin: 0;
+	border: 0;
+	padding: 0;
+
+	flex-shrink: 0;
+
+	width: 100%;
+
+	list-style: none;
+}
+
+.note-interior {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 4px;
+}
+
+.notes li {
+	width: 100%;
+
+	/* Keep updated with untiedPadding value in JS */
+	padding: 2px;
+}
+
+.staff-key li, .notes li {
+	height: $row-height;
+}
+
+.note-toolbar {
+	margin-left: -$toolbar-width;
+
+	width: $toolbar-width;
+
+	display: flex;
+	flex-direction: column;
+
+	flex-shrink: 0;
+
+	z-index: 1000;
+}
+
+.handle {
+	background-color: #fff;
+
+	flex-grow: 2;
+}
+
+.note-toggler {
+	background-color: #ee0;
+}
+
+$insert-color: #0f0;
+
+.note-handler {
+	background-color: $insert-color;
+}
+
+.handle, .note-toggler, .note-handler, .nr-rem {
+	width: 100%;
+}
+
+.note-toggler, .note-handler, .nc-rem {
+	height: $row-height;
+}
+
+$remove-color: #f00;
+
+.nc-rem {
+	background-color: $remove-color;
+}
+
+.vol-changer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.vol-rem {
+	width: $row-height;
+	height: $row-height;
+
+	background-color: $remove-color;
+}
+
+.vol-input {
+	width: 45px;
+}
+
+.vol-note-handler {
+	width: $row-height;
+	height: $row-height;
+
+	background-color: $insert-color;
+}
+
+.note-display {
+	height: 20px;
+}
+
+.instruments {
+	margin: 0;
+	border: 0;
+}
+
+.instruments li textarea {
+	width: 100px;
+	height: 24px;
+}
+
+.time-sig {
+	width: 40px;
+	height: 24px;
+}
+
+.tempo {
+	width: 60px;
+	height: 24px;
+}
+
+.buffer-length {
+	width: 60px;
+}
+
+.control-panel-row {
+	margin: 8px;
+	border: 0;
+	padding: 8px;
+
+	background-color: #eee;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.control-panel-row > *:not(:first-child) {
+	margin-left: 20px;
+}
+
+.note-display {
+	text-align: center;
+}
+
+.dump {
+	height: 200px;
+
+	flex-grow: 2;
+}
+
+.instrument-list {
+	min-width: 275px;
+}
+
+.staff-number {
+	width: 40px;
+}
