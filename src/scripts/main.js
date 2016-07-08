@@ -1185,7 +1185,7 @@ function raiseStaff(staffNum, numHalfSteps) {
 			child.innerHTML = newPitch;
 
 			if (Note.accidental(newPitch)) {
-				child.style.height = moddedNoteHeight;
+				child.style.height = moddedNoteHeight + 'px';
 			}
 			else {
 				child.style.height = '';
@@ -1197,7 +1197,7 @@ function raiseStaff(staffNum, numHalfSteps) {
 	var firstPitch = Note.raiseHalfStep(staffKey.children[1].innerHTML);
 
 	if (Note.accidental(firstPitch)) {
-		staffKey.children[0].style.height = moddedNoteHeight;
+		staffKey.children[0].style.height = moddedNoteHeight + 'px';
 	}
 	else {
 		staffKey.children[0].style.height = '';
@@ -1206,7 +1206,7 @@ function raiseStaff(staffNum, numHalfSteps) {
 	var lastPitch = Note.lowerHalfStep(staffKey.children[staffKey.children.length - 2].innerHTML);
 
 	if (Note.accidental(lastPitch)) {
-		staffKey.children[staffKey.children.length - 1].style.height = moddedNoteHeight;
+		staffKey.children[staffKey.children.length - 1].style.height = moddedNoteHeight + 'px';
 	}
 	else {
 		staffKey.children[staffKey.children.length - 1].style.height = '';
@@ -1226,7 +1226,7 @@ function lowerStaff(staffNum, numHalfSteps) {
 			child.innerHTML = newPitch;
 
 			if (Note.accidental(newPitch)) {
-				child.style.height = moddedNoteHeight;
+				child.style.height = moddedNoteHeight + 'px';
 			}
 			else {
 				child.style.height = '';
@@ -1238,7 +1238,7 @@ function lowerStaff(staffNum, numHalfSteps) {
 	var firstPitch = Note.raiseHalfStep(staffKey.children[1].innerHTML);
 
 	if (Note.accidental(firstPitch)) {
-		staffKey.children[0].style.height = moddedNoteHeight;
+		staffKey.children[0].style.height = moddedNoteHeight + 'px';
 	}
 	else {
 		staffKey.children[0].style.height = '';
@@ -1247,7 +1247,7 @@ function lowerStaff(staffNum, numHalfSteps) {
 	var lastPitch = Note.lowerHalfStep(staffKey.children[staffKey.children.length - 2].innerHTML);
 
 	if (Note.accidental(lastPitch)) {
-		staffKey.children[staffKey.children.length - 1].style.height = moddedNoteHeight;
+		staffKey.children[staffKey.children.length - 1].style.height = moddedNoteHeight + 'px';
 	}
 	else {
 		staffKey.children[staffKey.children.length - 1].style.height = '';
