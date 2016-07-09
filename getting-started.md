@@ -38,8 +38,17 @@ Extend and shorten a staff with its green and red buttons.
 
 ---
 
-You can set the time signature and the tempo in the options below.
-If you are hearing dropped notes, you can increase the note buffer length. Be careful--A higher note buffer length uses more memory and may crash your browser.
+![Raise and lower a staff](http://i.imgur.com/WZXXGL7.gif)
+
+All of the notes on a staff can be raised or lowered by a half step at a time using the "Raise" and "Lower" buttons.  
+In the field, set the staff number that will be raised/lowered. "1" refers to the first staff.  
+Pitches can range from C0 to C8.
+
+---
+
+You can set the time signature and the tempo in the options below.  
+If you are hearing dropped notes, you can increase the note buffer length.  
+Be careful--A higher note buffer length uses more memory and may crash your browser.
 
 ---
 
@@ -48,6 +57,6 @@ If you make changes, you must press "Construct song..." again to hear the change
 
 ---
 
-When the song is constructed, the song's JSON is shown in the text field below.
-You can save the JSON and load it to work on later.  
+When the song is constructed, the song's JSON is shown in the text field below.  
+You can save the JSON to load and work on later.  
 You can also edit the JSON in the text field and load it with the changes.
